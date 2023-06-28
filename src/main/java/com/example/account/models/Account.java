@@ -1,6 +1,6 @@
 package com.example.account.models;
 
-import java.util.List;
+import java.math.BigDecimal;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,13 +21,22 @@ public class Account {
 
     @Getter
     @Setter
-    private String user;
+    private String username;
 
     @Getter
     @Setter
-    private float balance;
+    private BigDecimal balance;
 
     @Getter
     @Setter
     private String currency;
+
+    public Account() {}
+
+    public Account(String name, String username, BigDecimal balance, String currency) {
+        this.name = name;
+        this.username = username;
+        this.balance = balance;
+        this.currency = currency;
+    }
 }
