@@ -2,6 +2,7 @@ package com.example.account.controllers;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,6 +14,7 @@ import com.example.account.exceptions.AccountNotFoundException;
 import com.example.account.models.Account;
 import com.example.account.repositories.AccountRepository;
 
+@CrossOrigin
 @RestController
 public class AccountController {
 
