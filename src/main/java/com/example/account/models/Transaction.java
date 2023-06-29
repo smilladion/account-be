@@ -1,7 +1,7 @@
 package com.example.account.models;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.Instant;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,7 +22,7 @@ public class Transaction {
 
     @Getter
     @Setter
-    private LocalDateTime timestamp;
+    private Instant timestamp;
 
     @Getter
     @Setter
