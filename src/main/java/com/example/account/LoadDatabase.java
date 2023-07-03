@@ -35,11 +35,23 @@ class LoadDatabase {
                     + accountRepository.save(account3));
 
             log.info("Preloading "
-                    + transactionRepository.save(new Transaction(Instant.now(), new BigDecimal(300.0), account1)));
+                    + transactionRepository.save(new Transaction(Instant.parse("2023-07-01T10:15:30.00Z"), new BigDecimal(300.0), account1)));
             log.info("Preloading "
-                    + transactionRepository.save(new Transaction(Instant.now(), new BigDecimal(1000.0), account1)));
+                    + transactionRepository.save(new Transaction(Instant.parse("2023-06-16T09:10:30.00Z"), new BigDecimal(1000.0), account1)));
             log.info("Preloading "
-                    + transactionRepository.save(new Transaction(Instant.now(), new BigDecimal(-400), account1)));
+                    + transactionRepository.save(new Transaction(Instant.parse("2023-06-24T14:34:30.00Z"), new BigDecimal(-400.0), account1)));
+            log.info("Preloading "
+                    + transactionRepository.save(new Transaction(Instant.parse("2023-05-12T10:05:30.00Z"), new BigDecimal(3000.0), account1)));
+
+            log.info("Preloading "
+                    + transactionRepository.save(new Transaction(Instant.parse("2023-07-01T08:50:30.00Z"), new BigDecimal(-550.0), account2)));
+            log.info("Preloading "
+                    + transactionRepository.save(new Transaction(Instant.parse("2023-06-30T11:42:30.00Z"), new BigDecimal(-1000.0), account2)));
+
+            log.info("Preloading "
+                    + transactionRepository.save(new Transaction(Instant.parse("2023-06-20T09:10:30.00Z"), new BigDecimal(3000.0), account3)));
+            log.info("Preloading "
+                    + transactionRepository.save(new Transaction(Instant.parse("2023-05-30T16:32:30.00Z"), new BigDecimal(500.0), account3)));
         };
     }
 }

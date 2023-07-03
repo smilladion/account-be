@@ -29,7 +29,7 @@ public class TransactionController {
             throw new AccountNotFoundException(accountId);
         }
 
-        List<Transaction> transactions = transactionRepository.findByAccountId(accountId);
+        List<Transaction> transactions = transactionRepository.findByAccountIdOrderByTimestampDesc(accountId);
         return transactions;
     }
 }
